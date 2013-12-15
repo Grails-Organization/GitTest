@@ -5,6 +5,7 @@ class File {
 	String type
 	int size
 	byte[] file
+	static auditable = true
 	static constraints = {
 		file(nullable:true, maxSize:1073741824) // max of 4GB file for example
 		type(blank:true, nullable:true)

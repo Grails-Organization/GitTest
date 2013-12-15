@@ -12,7 +12,7 @@ class User {
 	boolean passwordExpired
 
 	static transients = ['springSecurityService']
-
+	static auditable = true
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false

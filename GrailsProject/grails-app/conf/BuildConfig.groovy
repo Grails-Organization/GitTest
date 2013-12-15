@@ -56,5 +56,6 @@ grails.project.dependency.resolution = {
 		compile ":spring-security-ui:1.0-RC1"
 		compile ":mysql-connectorj:5.1.22.1"
 		compile ":burning-image:0.5.1"
+		compile ":audit-logging:0.5.5.3"
     }
 }

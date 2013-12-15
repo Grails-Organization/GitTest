@@ -1,14 +1,15 @@
 package com.testapp
 
-import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
-
+import org.codehaus.groovy.grails.plugins.orm.auditable.AuditLogEvent
 @Secured(['ROLE_ADMIN'])
 class ContentController {
 	def imageUploaderService
     def index() { 
-		
-		
+		def test = AuditLogEvent.list()
+		test.each{
+		println "test=="+it.eventName
+		}
 	}
 	def upload() {
 		def fileInstance = new File(params)
